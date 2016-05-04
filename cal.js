@@ -1,12 +1,17 @@
 $(document).ready(function() {
+//click function
 $("button").click(function(e) {
-console.log((this.id).text());
+//picks up the ID of the item clicked on this. Store 
+current = this.value;
+//Store each value as a string in a variable
+memory = memory +current;
+console.log(memory);
+//Append string display
+  $("#window").text(memory);
 });
  
 });
 
-//click function
-//picks up the ID of the item clicked on this. Store 
 
 //multiply function(a, b) {
 //    a * b
@@ -23,7 +28,7 @@ console.log((this.id).text());
 
 // //minus function
 
-var memory = '0';
+var memory ='';
 var current = '0';
 var operation;
 var maxLength = 30;
