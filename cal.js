@@ -8,13 +8,21 @@ memory = memory +current;
 console.log(memory);
 //Append string display
   $("#window").text(memory);
+// when an operation button is pressed, push memory to array
+  if(this.value == 'x'||this.value =='-'|| this.value =='+'|| this.value =='/') {
+    array.push(parseFloat(memory));
+    //clear memory
+    memory = "";
+    operation.push(this.value);
+  }
+    console.log(operation);
 });
  
 });
 
 
-//multiply function(a, b) {
-//    a * b
+// multiply function(memory, b) {
+//   a * b
 
 // }
 
@@ -28,9 +36,13 @@ console.log(memory);
 
 // //minus function
 
+//Stores each memory so we can do math later
+var array =[];
+// Memory stores string of numbers pressed
 var memory ='';
+// Current stores each value pressed
 var current = '0';
-var operation;
+var operation = [];
 var maxLength = 30;
 
 // if (current > maxLength) {
