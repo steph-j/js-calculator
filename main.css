@@ -2,6 +2,28 @@
 
 button {
 height: 50px;
-width: 50px
+width: 50px;
 }
+
+.triple{
+width: 159px;
+}
+
+.double{
+width: 103px;
+}
+
+#window {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+height: 50px;
+width: 213px;
+border: 1px solid gray;
+box-sizing: border-box;
+padding-right: 10px;
+font-size: 20px;
+margin: 0px;
+}
+
 
