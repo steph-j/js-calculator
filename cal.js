@@ -2,22 +2,29 @@ $(document).ready(function() {
   //click function
   $("button").click(function(e) {
     //picks up the ID of the item clicked on this. Store 
-    if (this.value == '=') {
-    equation = array.join("");
-    total = eval(equation);
-    console.log(total);
-    $("#window").text(total);
+      current = this.value;
+    if (current == '=') {
+      equation = array.join("");
+      total = eval(equation);
+      console.log(total);
+      $("#window").text(total);
+    } else if (current == 'AC') {
+      memory = '';
+      array = [];
+      $('#window').text('0');
+      console.log(array);                           
+    } else {
+      memory = memory + current;
+      $("#window").text(memory);
+      array.push(current);
     }
-    else {
-    current = this.value;
-    memory = memory + current;
-    $("#window").text(memory);
-    array.push(current);
-  }
 
   }); // Closes button
 
 }); // Closes document
+
+
+
 var total = '';
 //Stores each memory so we can do math later
 var array = [];
@@ -27,7 +34,7 @@ var memory = '';
 var current = '0';
 var maxLength = 30;
 var equation = "";
-
+var reset = 0;
 // if (current > maxLength) {
 //   return "Too Long"
 // }
